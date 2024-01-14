@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+
+    defaultConfig {
+        applicationId "com.example.projetfinal"
+        minSdk 25
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_9
+        targetCompatibility JavaVersion.VERSION_1_9
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'androidx.core:core:1.6.0'
+    implementation 'androidx.wear.tiles:tiles-material:1.1.0-alpha04'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    implementation 'org.knowm.xchange:xchange-stream-binance:5.0.14'
+    implementation 'org.knowm.xchange:xchange-binance:5.0.14'
+    implementation 'org.knowm.xchange:xchange-stream-coinbasepro:5.0.14'
+    implementation 'org.knowm.xchange:xchange-coinbasepro:5.0.14'
+    implementation 'org.knowm.xchange:xchange-stream-kraken:5.0.14'
+    implementation 'org.knowm.xchange:xchange-kraken:5.0.14'
+    implementation 'org.knowm.xchange:xchange-stream-gateio:5.0.14'
+    implementation 'org.knowm.xchange:xchange-gateio:5.0.14'
+    implementation 'org.knowm.xchange:xchange-stream-huobi:5.0.14'
+    implementation 'org.knowm.xchange:xchange-huobi:5.0.14'
+
+    implementation 'org.knowm.xchange:xchange-upbit:5.0.14'
+
+}
